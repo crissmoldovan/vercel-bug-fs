@@ -1,4 +1,3 @@
-import fs from "fs";
 import { getData } from "../lib";
 
 const Index = ({ data }) => (
