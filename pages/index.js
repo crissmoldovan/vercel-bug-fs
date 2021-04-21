@@ -1,4 +1,5 @@
 import fs from "fs";
+import { getData } from "../lib";
 
 const Index = ({ data }) => (
   <div>
@@ -9,15 +10,11 @@ const Index = ({ data }) => (
 );
 
 export const getServerSideProps = async ({ req }) => {
-  if (false) {
-    const content = fs.readFileSync("/some path");
-  }
+  const data = getData();
 
   return {
     props: {
-      data: {
-        test: true,
-      },
+      data,
     },
   };
 };
